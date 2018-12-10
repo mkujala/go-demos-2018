@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"regexp"
 	"strings"
 )
 
@@ -13,7 +14,8 @@ type counts = (map[string]int)
 
 func main() {
 	text := string(readFile(inputFilename))
-	words := countWords(text)
+	cleanedText := removeChars(text, "[,.!?“”]")
+	words := countWords(cleanedText)
 	printResults(words)
 }
 
@@ -35,6 +37,15 @@ func printResults(r counts) {
 	for key := range r {
 		fmt.Printf("%s | %d\n---------------------\n", key, r[key])
 	}
+}
+
+func removeChars(text, chars string) string {
+	parse, err := regexp.Compile(chars)
+	if err != nil {
+		log.Fatal("Error removing chars:", chars, "\n", err)
+	}
+	cleanedText := parse.ReplaceAllString(text, "")
+	return cleanedText
 }
 
 func readFile(file string) []byte {
