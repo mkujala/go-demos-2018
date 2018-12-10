@@ -13,13 +13,13 @@ type counts = (map[string]int)
 
 func main() {
 	text := string(readFile(inputFilename))
-	result := countWords(text)
-	printResults(result)
+	words := countWords(text)
+	printResults(words)
 }
 
 func countWords(t string) counts {
 	counts := counts{}
-	sText := strings.Fields(t)
+	sText := strings.Fields(t) // split string to []string
 	for _, word := range sText {
 		_, ok := counts[word]
 		if ok {
@@ -42,6 +42,5 @@ func readFile(file string) []byte {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	return data
 }
