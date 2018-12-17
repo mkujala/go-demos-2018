@@ -1,3 +1,8 @@
+// find second lowest int in slice
+// remove dublicates from slice
+// sort + revers sort slice
+// merge two sorted slices
+
 package main
 
 import (
