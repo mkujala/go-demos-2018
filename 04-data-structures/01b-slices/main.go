@@ -21,16 +21,14 @@ func firstNonRep(s []int) {
 	nr := nonRep{}
 	for _, i := range s {
 		// fmt.Println(nr)
-		if len(nr) < 3 {
-			_, ok := nr[i]
-			if ok {
-				nr[i] = nr[i] + 1
-			} else {
-				nr[i] = 0
-				if len(nr) == 3 {
-					fmt.Println("first non-repeating value:", i)
-					break
-				}
+		_, ok := nr[i]
+		if ok {
+			nr[i] = nr[i] + 1
+		} else {
+			nr[i] = 0
+			if len(nr) == 3 {
+				fmt.Println("first non-repeating value:", i)
+				break
 			}
 		}
 	}

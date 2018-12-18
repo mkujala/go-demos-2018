@@ -1,3 +1,4 @@
+// Linked list
 package main
 
 import "fmt"
@@ -14,31 +15,31 @@ type stack struct {
 
 func main() {
 	stk := new(stack)
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("head: %+v  Size:%v\n", stk.head, stk.Size)
 
 	stk.Push(10)
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("Push: 10\nhead: %+v  Size:%v\n", stk.head, stk.Size)
 
 	stk.Push(12)
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("Push: 12\nhead: %+v  Size:%v\n", stk.head, stk.Size)
 
 	stk.Push(8)
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("Push: 8\nhead: %+v  Size:%v\n", stk.head, stk.Size)
 
 	stk.Push(6)
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("Push: 6\nhead: %+v  Size:%v\n", stk.head, stk.Size)
 
 	fmt.Println("\npop item:", stk.Pop())
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("head: %+v  Size:%v\n", stk.head, stk.Size)
 
 	fmt.Println("pop item:", stk.Pop())
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("head: %+v  Size:%v\n", stk.head, stk.Size)
 
 	fmt.Println("pop item:", stk.Pop())
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("head: %+v  Size:%v\n", stk.head, stk.Size)
 
 	fmt.Println("pop item:", stk.Pop())
-	fmt.Println("head:", stk.head, "Size:", stk.Size)
+	fmt.Printf("head: %+v  Size:%v\n", stk.head, stk.Size)
 
 	fmt.Println("pop item:", stk.Pop())
 }
