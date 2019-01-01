@@ -18,6 +18,8 @@ func main() {
 	fmt.Println(s)
 	fmt.Println("pop:", s.pop())
 	fmt.Println("pop:", s.pop())
+	fmt.Println("push: 8")
+	s.push(8)
 	fmt.Println("pop:", s.pop())
 	fmt.Println(s)
 }
