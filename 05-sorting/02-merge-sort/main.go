@@ -30,8 +30,8 @@ func merge(a arr, l, m, r int) {
 	fmt.Printf("merge l:%v m:%v r:%v \n", l, m, r)
 	n1 := m - l + 1
 	n2 := r - m
-	var leftArr arr
-	var rightArr arr
+	leftArr := make(arr, n1)
+	rightArr := make(arr, n2)
 
 	for i := 0; i < n1; i++ {
 		leftArr[i] = a[l+i]
