@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"go-demos-2018/100-random/01-json-config/config"
+)
 
 func main() {
-	fmt.Println("config test")
+	config := config.Values()
+	fmt.Println(config.Port)
 }

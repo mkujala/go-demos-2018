@@ -7,29 +7,30 @@ import (
 	"os"
 )
 
+// Config is type for config values
 type Config struct {
-	Env      string `json:"Env"`
-	Port     int    `json:"Port"`
-	Database struct {
-		DBname string `json:"DBname"`
-		DBurl  string `json:"DBurl"`
-		DBuser string `json:"DBuser"`
-		DBpass string `json:"DBpass"`
-	} `json:"Database"`
+	Env  string `json:"Env"`
+	Port int    `json:"Port"`
+	DB   struct {
+		Name string `json:"Name"`
+		URL  string `json:"URL"`
+		User string `json:"User"`
+		Pass string `json:"Pass"`
+	} `json:"DB"`
 }
 
-func init() {
-	jsonFile, err := os.Open("config.json")
+// Values returns config values
+func Values() Config {
+	jsonFile, err := os.Open("config/config.json")
 
 	if err != nil {
 		fmt.Println(err)
 	}
-
 	defer jsonFile.Close()
 
 	byteValue, _ := ioutil.ReadAll(jsonFile)
 	var config Config
 	json.Unmarshal(byteValue, &config)
 
-	fmt.Println(config)
+	return config
 }
