@@ -1,0 +1,10 @@
+{
+    "Env": "dev",
+    "Port": 8000,
+    "Database": {
+        "DBname": "testdb",
+        "DBurl": "localhost",
+        "DBuser": "username",
+        "DBpass": "password"
+    }
+}
