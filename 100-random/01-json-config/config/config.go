@@ -10,7 +10,7 @@ import (
 // Config is type for config values
 type Config struct {
 	Env  string `json:"Env"`
-	Port int    `json:"Port"`
+	Port string `json:"Port"`
 	DB   struct {
 		Name string `json:"Name"`
 		URL  string `json:"URL"`

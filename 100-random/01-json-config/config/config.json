@@ -1,6 +1,6 @@
 {
     "Env": "dev",
-    "Port": 8000,
+    "Port": ":8000",
     "DB": {
         "Name": "testdb",
         "URL": "localhost",

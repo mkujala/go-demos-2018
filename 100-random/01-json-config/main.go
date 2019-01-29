@@ -7,5 +7,5 @@ import (
 
 func main() {
 	config := config.Values()
-	fmt.Println(config.Port)
+	fmt.Printf("Config: Env=%s Port=%s DB.Name=%s\n", config.Env, config.Port, config.DB.Name)
 }
